@@ -3,4 +3,4 @@ require "terminal-notifier"
 
 sleep ARGV[0].to_i # * 60
 puts "Timer finish!"
-TerminalNotifier.notify( 'Timer finish!' )
+TerminalNotifier.notify( 'Timer finish!', sound: 'Hero' )
