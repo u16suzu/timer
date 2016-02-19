@@ -1,14 +1,25 @@
 # 分単位で入力する
 require "terminal-notifier"
 
-def sec
-  ARGV[0].to_i # * 60
+class Timer
+  def self.input_in_sec
+    ARGV[0].to_i # * 60
+  end
+
+  def wait( second )
+    (0..second).each do |i|
+      print "\r#{i} sec  "
+      sleep 1
+    end
+
+    notify_finish
+  end
+
+  def notify_finish
+    puts "Timer finish!"
+    TerminalNotifier.notify( 'Timer finish!', sound: 'Hero' )
+  end
+
 end
 
-(0..sec).each do |i|
-  print "\r#{i}sec  "
-  sleep 1
-end
-
-puts "Timer finish!"
-TerminalNotifier.notify( 'Timer finish!', sound: 'Hero' )
+Timer.new.wait( Timer.input_in_sec )
