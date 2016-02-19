@@ -1,7 +1,7 @@
-### Set Path
+### Set command alias
 
 ```
-alias timer="be ruby /Users/u16suzu/workGithub/timer/main.rb"
+alias timer="cd /Users/u16suzu/workGithub/timer/ && bundle exec ruby main.rb"
 ```
 
 ### Usage
