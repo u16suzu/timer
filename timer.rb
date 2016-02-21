@@ -18,8 +18,8 @@ class Timer
     (0..second).each do |i|
       print "\r #{current_s(i)} / #{total_s(second)}"
       sleep 1
+      notify_middle if i == second/2
     end
-
     notify_finish
   end
 
@@ -29,6 +29,11 @@ class Timer
 
   def total_s(i)
     "(#{i / 60}min #{i % 60}sec)"
+  end
+  
+  def notify_middle
+    puts 'Middle'
+    TerminalNotifier.notify('Middle', sound: 'Hero')
   end
 
   def notify_finish
