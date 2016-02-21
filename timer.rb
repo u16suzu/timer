@@ -24,11 +24,11 @@ class Timer
   end
 
   def current_s(i)
-    "#{i/60}min #{i%60}sec"
+    "#{i / 60}min #{i % 60}sec"
   end
 
   def total_s(i)
-    "(#{i/60}min #{i%60}sec)"
+    "(#{i / 60}min #{i % 60}sec)"
   end
 
   def notify_finish
