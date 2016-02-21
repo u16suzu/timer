@@ -1,4 +1,4 @@
-require "terminal-notifier"
-require "./timer"
+require 'terminal-notifier'
+require './timer'
 
-Timer.new.wait( Timer.input_in_sec )
+Timer.new.wait(Timer.input_in_sec)
