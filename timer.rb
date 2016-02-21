@@ -13,7 +13,7 @@ class Timer
 
   def wait( second )
     (0..second).each do |i|
-      print "\r#{i} sec  "
+      print "\r#{i}/#{second} sec  "
       sleep 1
     end
 
