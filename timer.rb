@@ -3,6 +3,8 @@
 # This class do measurement of time.
 # Notify when finish.
 class Timer
+  SOUND_NAME = 'Glass'
+
   def self.input_in_sec
     case ARGV[0].to_s
     when '-m'
@@ -30,14 +32,14 @@ class Timer
   def total_s(i)
     "(#{i / 60}min #{i % 60}sec)"
   end
-  
+
   def notify_middle
     puts 'Middle'
-    TerminalNotifier.notify('Middle', sound: 'Hero')
+    TerminalNotifier.notify('Middle', sound: SOUND_NAME)
   end
 
   def notify_finish
     puts 'Timer finish!'
-    TerminalNotifier.notify('Timer finish!', sound: 'Hero')
+    TerminalNotifier.notify('Timer finish!', sound: SOUND_NAME)
   end
 end
